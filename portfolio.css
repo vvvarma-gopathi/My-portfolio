@@ -1,0 +1,509 @@
+/* animation are here */
+@keyframes glow {
+      0%{
+        box-shadow: 2px 2px 10px red, -2px -2px 10px blue;
+      }
+      100%{
+        box-shadow: 2px 2px 10px blue, -2px -2px 10px red;
+      }
+    }
+@keyframes typing {
+  0%{
+    width:0;
+  }
+  100%{
+    width:45ch;
+  }
+}
+@keyframes button_ani{
+  0%{
+    width:7rem;
+    height:3rem;
+    opacity:1;
+  }
+  90%{
+    width:0.5rem;
+    height:0.3rem;
+    font-size: 3px;
+  }
+  100%{
+    display:none;
+    opacity:0;
+    visibility: hidden;
+  }
+}
+@keyframes in_animation {
+  0%{
+    height:1%;
+    width:4%;
+    font-size: 5px;
+  }
+  100%{
+    height:10%;
+    width:100%;
+  }
+}
+@keyframes dynamicdata_ani {
+  0%{
+    height:5%;
+    width:10%;
+    font-size:2px;
+  }  
+  100%{
+    height:90%;
+    width:100%;
+    font-size: 16px;
+  }
+}
+@keyframes bounce{
+  0%{
+    position:absolute;
+    top:-100%;
+  }
+  30%{
+    position: absolute;
+    top:0px;
+  }
+  50%{
+    position:absolute;
+    top:-20%;
+  }
+  70%{
+    position:absolute;
+    top:0px;
+  }
+  90%{
+    position: absolute;
+    top:-10%;
+  }
+}
+/* stylings starts from here */
+body 
+{
+      margin: 0;
+      padding: 0;
+      height: auto;
+      background: #000;
+      overflow: hidden;
+}
+
+    .background 
+    {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 30% 30%, #00bfff33, transparent),
+                  radial-gradient(circle at 70% 70%, #00ffff33, transparent),
+                  radial-gradient(circle at 50% 50%, #00bfff11, #000000);
+      filter: blur(40px);
+      z-index: 0;
+    }
+
+    .overlay 
+    {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+    /* disclaimer starts here */
+    .disclaimer{
+      color:#FFFF;
+      width:100%;
+      height:2rem;
+      position:absolute;
+      top:5rem;
+      text-align: center;
+      z-index: 4;
+    }
+
+    .content 
+    {
+      position: absolute;
+      top:5rem;
+      z-index: 2;
+      width:100%;
+      display: flex;
+      justify-content: space-around;
+      align-items:center;
+      height: 90%;
+      color: #00ffff;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 2rem;
+      text-shadow: 0 0 10px #00ffff88;
+    }
+#top_menu
+{
+    width:100%;
+    height:5rem;
+    position:absolute;
+    z-index: 3;
+    top:0px;
+    background-color: #1A1A1A;
+    color:#FFFF;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    span{
+        height:100%;
+        width:max-content;
+        display:flex;
+        align-items: center;
+    }
+    a{
+      font-size: 12px;
+      text-decoration: none;
+    }
+    span:hover{
+        border:2px solid white;
+    }
+    .icon{
+        height:3rem;
+        width:3rem;
+    }
+ }
+.profile
+{
+  height:100%;
+  width:25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .profile_pic{
+    background-color:red;
+    width:10rem;
+    height:10rem;
+    border-radius: 50%;
+    border: 2px solid #FFFF;
+    text-align: center;
+    overflow: hidden;
+    img{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+    }
+  }
+  /* section buttons starts from here */
+  .buttons{
+    width:min-content;
+    display:block;
+  }
+  .section{
+    background-color:#00ffff88;
+    margin-bottom: 2rem;
+    color:#000;
+    width:6rem;
+    height:2rem;
+  }
+  .section:hover{
+    width:7rem;
+    height:3rem;
+    position:relative;
+    left:1rem;
+    border-radius:25%;
+    color: #FFFF;
+    background-color:transparent;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px red, -2px -2px 10px blue;
+  }
+  .animate{
+    width:7rem;
+    height:3rem;
+    position:relative;
+    left:1rem;
+    border-radius:25%;
+    color: #FFFF;
+    background-color:transparent;
+    box-shadow: 2px 2px 10px red, -2px -2px 10px blue;
+    animation: button_ani 1s ease-in forwards;
+  }
+}
+.maincontent
+{
+  height:80%;
+  width:70%;
+  color:black;
+  animation: glow;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  display: block;
+}
+.scroll_indicator{
+  display:none;
+}
+.page-info{
+    height:2rem; 
+    width:max-content; 
+    position:fixed; 
+    white-space: nowrap;
+    overflow: hidden;
+    bottom:0px; 
+    right:1rem;
+    color:#FFFF;
+    z-index:4;
+    display:flex;
+    align-items:center;
+    .typing{
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typing 3s infinite;
+    }
+}
+/* dynamically loded data styling starts from here */
+.dynamic_head{
+  background-color: #ffff;
+  color:#000;
+  width:100%;
+  height:10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: in_animation 1s ease-in;
+}
+.dynamic_maindata{
+  color:#FFFF;
+  height:90%;
+  width:100%;
+  animation: dynamicdata_ani 1s ease-in forwards;
+  overflow: hidden;
+}
+#dy_skills{
+  display:flex;
+  flex-direction:row;
+  justify-content: flex-start;
+  padding-left:5px;
+  span{
+    height: min-content;
+    border-left:2px solid #FFFF;
+    p{
+    height: min-content;
+    font-size: 14px;
+    }
+  }
+}
+#dy_education{
+  td,th{
+    width:max-content;
+    height:max-content;
+    border: 2px solid #FFFF;
+    padding: 1rem;
+  }
+}
+#dy_certifications{
+  overflow-y: scroll;
+  animation: dynamicdata_ani 1s ease-in forwards;
+  color:#FFFF;
+  img{
+    width:70%;
+    height:70%;
+  }
+}
+#dy_projects{
+   overflow-y: scroll;
+  animation: dynamicdata_ani 1s ease-in forwards;
+  color:#FFFF;
+  img{
+    width:100%;
+    height:100%;
+  }
+}
+#dy_achievements{
+  color:#FFFFFF;
+}
+.bottom_text_ani{
+  color:#FFFFFF;
+  font-size: 16px;
+  animation:in_animation 1s ease-in forwards;
+}
+.bottom_text{
+  display:none;
+}
+/*feedback and suggestion section styling starts from here*/
+.feedback{
+  position:absolute;
+  left:0px;
+  bottom:0px;
+  z-index: 3;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  color:#FFFF;
+  img {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+}
+button{
+  cursor: pointer;
+}
+}
+.recieve_feedback{
+  display:flex;
+  align-items: center;
+  textarea{
+    background-color: transparent;
+    color:#FFF;
+  }
+  button{
+    cursor: pointer;
+    margin-left: 1rem;
+  }
+}
+/* about the page section styling starts from here */
+.about_page{
+  display:None;
+}
+.page-info{
+  font-size: 16px;
+}
+.feedback{
+  font-size:12px;
+}
+.show_about_page{
+  background-color:#FFF;
+  color:#000;
+  height:100%;
+  width:100%;
+  z-index: 4;
+  position:absolute;
+  top:0px;
+  overflow-y: scroll;
+  animation:bounce 1.5s ease-in forwards;
+  #close_button{
+    width:5rem;
+    height:4rem;
+    position:fixed;
+    border:none;
+    background: transparent;
+    top:3rem;
+    right:3rem;
+    border-radius:10%;
+    cursor: pointer;
+    color:red;
+    img{
+      height: 100%;
+      width:100%;
+    }
+  }
+  .about_heading{
+    background-color: #1A1A1A;
+    color:#FFF;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow: #00ffff;
+  }
+  h4{
+    height:min-content;
+  }
+}
+.education_details{
+  display:none;
+}
+/* media styling starts from here for mobile screens */ 
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+    height:auto;
+    overflow: scroll;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  #top_menu{
+    display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 3 columns by default */
+      gap: 10px;
+      padding: 10px;
+      height:max-content;
+      .name{
+        grid-column: span 4;
+      }
+  }
+  .disclaimer{
+    position:absolute;
+    top:13rem;
+  }
+  .content{
+    position:absolute;
+    top:19rem;
+    display:flex;
+    height:max-content;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    padding-bottom:3rem;
+    .profile{
+      display:flex;
+      flex-direction: column;
+    }
+    .buttons{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
+      gap: 10px;
+      padding: 10px;
+      button{
+        width:8rem;
+        height:3rem;
+      }
+    }
+  }
+  .page-info{
+    position:relative;
+    bottom:-10rem;
+    font-size:10px;
+    padding-left:2rem;
+    span{
+      width:10rem;
+      
+    }
+  }
+  .feedback{
+    position:relative;
+    bottom:1rem;
+    left:-1rem;
+  }
+  .show_about_page{
+    position:absolute;
+    bottom:0px;
+    height:min-content;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+  .maincontent{
+    overflow-x: scroll;
+    width: 100%;
+  }
+  #dy_education{
+    table{
+    border-collapse: collapse;
+    width: fit-content;
+    th,td{
+      width:min-content;
+    }
+  }
+  }
+  #dy_skills{
+    display:grid;
+    grid-template-columns:repeat(2,3fr);
+    padding-left:0px;
+    span{
+      height:25rem;
+      border:2px solid #FFFF;
+    }
+  }
+  .education_details{
+    display: block;
+    font-size: 16px;
+    p{
+      color:#FFFF;
+    }
+  }
+  #education{
+    display:none;
+  }
+}

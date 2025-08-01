@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Black & Light Blue Background</title>
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+  <div class="background"></div>
+  <div class="overlay"></div>
+  <!-- menu starts from here -->
+
+      <div id="top_menu">
+          <span class="name">
+              <h2>Vishnu Vardhan Varma Gopathi</h2>
+          </span>
+          <span>
+              <a href="https://www.linkedin.com/in/vvvarma66/"><img src="icons\linkedin.png" alt="linkedin icon" class="icon"> <p>Linkedin</p></a>
+          </span>
+              
+          <span>
+              <a href="mailto:vishnuvardhangopathi@gmail.com"><img src="icons\email.png" alt="email icon" class="icon"><p>E-mail</p></a>
+          </span>
+          <span>
+              <a href="https://www.hackerrank.com/profile/vishnuvardhang15"><img src="icons\hackerrank.png" alt="hackerrank icon" class="icon"><p>HackerRank</p></a>
+          </span>
+          <span >
+              <a href="https://github.com/vvvarma-gopathi"><img style="background-color: aliceblue;" src="icons\github.png" alt="github icon" class="icon"><p>Git Hub</p></a>
+          </span>
+      </div>
+      <div class="disclaimer">
+        📌 Click on LinkedIn, Email, GitHub, or HackerRank icons above to visit my profiles. Use the buttons below to explore different sections. This site is fully interactive — no reload needed!
+      </div>
+    <div class="content">
+      <!-- portfolio tabs starts from here -->
+       <div class="profile">
+        <div>
+          <div class="profile_pic">
+            <img src="media/profile_pic1.jpeg" alt="error while loading the image">    <!-- profile pic -->
+          </div>
+          <div class="bottom_text">
+          Web Developer | Python  <br> Coder | problem solving
+          </div>
+        </div>
+        <div class="buttons">
+          <button class="section" onclick="section('skills')" id="skills">Skills</button>
+          <button class="section" onclick="section('education')" id="education">Education</button>
+          <button class="section" onclick="section('achievements')" id="achievements">Achievements</button>
+          <button class="section" onclick="section('certifications')" id="certifications">Certifications</button>
+          <button class="section" onclick="section('projects')" id="projects">Projects</button>
+      </div>
+       </div>
+       <!-- tabs main content here -->
+        <div class="maincontent" id="dynamic_content_div">
+          <p style="font-size: 16px; color:#FFFFFF; padding-left:2rem;">
+            Hi there! I'm Vishnu Vardhan Varma, a passionate coder who loves turning ideas into interactive and meaningful web experiences. <br> 
+            Whether it's solving complex problems or building clean, user-friendly designs, I enjoy every part of the development journey.<br> <br> <br>
+            Welcome to my portfolio page, where I showcase my potential across various fields. <br>
+            Click the buttons to explore different sections of my portfolio.
+          </p>
+        </div>
+        <div class="education_details">
+          <h2>Education</h2>
+          <h3>B.sc.(Honours) computer science - pursuing(3rd year)</h3>
+          <p>Govt Degree College Khairatabad</p>
+          <h3>Intermidiate (MPC)</h3>
+          <p>Ts Model School & Jr College Lingapur</p>
+          <p>2023</p>
+          <p>88.5%</p>
+        </div>
+        <div class="page_bottom">
+      <div class="page-info">
+            <span style="width:45ch;">
+              <p class="typing">To know more about this Interactive portfolio page 👉  </p>
+            </span> <button style="background: transparent; color:greenyellow; cursor: pointer;" onclick="close_details()">Click Here</button>
+      </div>
+        <div class="feedback">
+          <span><img src="icons/feedback.png" alt="error while loading the icon"></span>
+          <span><p>Have any feedback or suggestions</p><button onclick="recieve_feedback()">Click Here</button></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- This is the page full details tab -->
+  <div class="about_page">
+    <div class="about_heading">
+      <h3>About this interactive web page</h3>
+      <button onclick="close_details()" id="close_button"><img src="icons/close.png" alt=""> Close</button>
+    </div>
+    <article>
+      <h4>About this portfolio</h4>
+      <p>
+        Welcome to my interactive portfolio website! <br>
+        This site showcases my skills, strengths, and potential in detail. <br>
+
+        At the top, you'll find a navigation bar featuring icons for HackerRank, LinkedIn, Email, and GitHub — all placed beside my name. Clicking on any of these icons will take you directly to the corresponding profile. <br>
+
+        Throughout the page, you’ll see several buttons. Clicking on each will allow you to explore different sections of my portfolio. The entire site is fully interactive, and content loads dynamically without the need to refresh the page. <br>
+        Thank you for visiting my portfolio! <br>
+        Don’t forget to leave your feedback or suggestions — they’re always appreciated. <br>
+      </p>
+      <div style="border:3px solid #000; padding-left: 1rem; padding-bottom:2rem;">
+        <h4>1. Structure & Layout – Built with HTML</h4>
+        <p>
+            The foundation of the portfolio is developed using HTML (HyperText Markup Language). It provides the structural framework for the entire website. Every section, including the navigation bar, portfolio content, buttons, and footer, is defined using semantic HTML elements to ensure both clarity and accessibility. <br>
+
+            Key HTML features: <br>
+
+            🔹Semantic tags like header, section, article, and footer for better readability and SEO. <br>
+
+            🔹Anchor tags linked to external profiles (HackerRank, GitHub, LinkedIn, Email). <br>
+
+            🔹Buttons that serve as interactive triggers for loading different sections. <br>
+        </p>
+        <h4>2. Styling & Visual Design – Powered by CSS</h4>
+        <p>
+            The visual presentation of the website is handled entirely with CSS (Cascading Style Sheets). The site is responsive, clean, and easy on the eyes — designed to work well on both desktop and mobile devices.
+
+            <br>CSS was used for: <br>
+
+            🔹Layout styling (flexbox and grid-based designs) <br>
+
+            🔹Typography, spacing, and colors <br>
+
+            🔹Hover effects and transitions to enhance interactivity <br>
+
+            🔹Responsive design through media queries <br>
+        </p>
+        <h4>3. Animations & Visual Feedback – CSS Animations</h4>
+        <p> 
+            To make the site more engaging and lively, CSS animations were used extensively. These animations provide smooth transitions and effects that improve the overall user experience without relying on external libraries.
+
+             <br> Examples of animations:<br>
+
+            🔹Button hover effects and scaling<br>
+
+            🔹Fade-in transitions for newly loaded content<br>
+
+            🔹Slide-in effects when navigating through sections<br>
+
+            These animations are lightweight and run efficiently on most devices.<br>
+        </p>
+        <h4>4. Dynamic Content Handling – Using JavaScript</h4>
+        <p>
+            One of the most impressive features of the site is its dynamic content loading, powered by JavaScript. Instead of reloading the page, different sections are loaded dynamically into the main view using the innerHTML method.
+
+             <br> JavaScript is responsible for:<br>
+
+            🔹Handling button clicks<br>
+
+            🔹Dynamically updating the content area<br>
+
+            🔹Managing transitions between sections<br>
+
+            🔹Improving user interactivity without refreshing the page<br>
+
+            This approach ensures a seamless single-page application (SPA)-like feel with fast content switching and enhanced responsiveness.
+        </p>
+        <h4>5. Feedback Handling – Form Submission via Email</h4>
+        <p>  
+          At the end of the site, visitors are encouraged to leave feedback or suggestions. This is implemented using a simple HTML form.
+
+          <br> How it works:<br>
+
+          🔹The form collects user input (like name, message, email).<br>
+
+          🔹Upon submission, the form data is sent directly to the site owner's email via a mail handling service (like FormSubmit, Formspree, or similar tools).<br>
+
+          🔹No backend code is required — making it secure and easy to maintain.<br>
+
+          This feature allows visitors to easily communicate, making the portfolio more interactive and user-centric.<br>
+        </p>
+      </div>
+    </article>
+    <div style="background-color: #000; height:1.5rem; position:fixed; bottom:0px; display:flex;justify-content: center; align-items: center; width:100%;">🔽</div>
+  </div>
+  <script src="portfolio.js"></script>
+</body>
+</html>
